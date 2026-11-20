@@ -36,11 +36,10 @@ export default function Home() {
             <span className="signal-dot" />
             <p className="mono-label">CURRENTLY EXPLORING</p>
             <p>
-              How to evaluate infrastructure agents safely—with reproducible
-              Kubernetes failures, evidence-based scoring, and strict security
-              boundaries.
+              How to test whether AI agents stay safe and useful when
+              processing Kafka events or diagnosing Kubernetes failures.
             </p>
-            <Link href="/projects">Follow the project →</Link>
+            <Link href="/projects">Explore the projects →</Link>
           </aside>
         </div>
       </section>

@@ -1,3 +1,20 @@
+export const projects = [
+  {
+    name: "streamjack",
+    status: "In development",
+    description: "A test harness for AI agents that consume and produce Apache Kafka events. It uses deterministic checks to report separately on whether an agent handles untrusted events safely and whether it still completes the intended task.",
+    technologies: ["Java", "Apache Kafka", "Quarkus"],
+    repository: "https://github.com/mosTavassoli/streamjack",
+  },
+  {
+    name: "Infrastructure Agent Conformance",
+    status: "MVP complete · External validation pending",
+    description: "An independent platform for testing whether AI agents diagnose Kubernetes failures safely and usefully. Its first suite checks for sensitive data leakage and out-of-scope actions, and evaluates whether diagnoses are grounded in evidence.",
+    technologies: ["Python", "Kubernetes", "DevOps Bench"],
+    repository: "https://github.com/mosTavassoli/infra-agent-conformance",
+  },
+];
+
 export const focusAreas = [
   { index: "01", title: "Backend systems", description: "APIs, integrations, and service boundaries designed for understandable failure and safe change." },
   { index: "02", title: "Data & performance", description: "Database behavior, query design, and the practical work of making critical paths faster." },

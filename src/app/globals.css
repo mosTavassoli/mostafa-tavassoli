@@ -115,9 +115,10 @@ a:hover .arrow-icon { transform: translate(3px, -3px); }
 .experience-card li { margin: 10px 0; color: var(--ink-soft); line-height: 1.6; }
 .listing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .listing-grid .post-card { min-height: 320px; }
+.project-list { display: grid; gap: 20px; }
 .project-card { padding: 38px; border: 1px solid var(--line); background: var(--white); }
 .project-status { display: inline-flex; align-items: center; gap: 8px; color: #25734f; font: 600 .7rem var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
-.project-status::before { width: 8px; height: 8px; border-radius: 50%; background: currentColor; content: ""; }
+.project-status::before { flex: 0 0 8px; height: 8px; border-radius: 50%; background: currentColor; content: ""; }
 .project-card h2 { margin: 50px 0 20px; font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.055em; }
 .project-card > p { max-width: 760px; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
 .project-pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 0; padding: 0; list-style: none; }

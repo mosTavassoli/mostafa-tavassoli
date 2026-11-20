@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Arrow } from "@/components/arrow";
+import { projects } from "@/data/site";
 
 export const metadata: Metadata = { title: "Projects" };
 
@@ -10,27 +12,33 @@ export default function ProjectsPage() {
           <p className="eyebrow">Open source & experiments</p>
           <h1 className="page-title">Projects designed to teach by being useful.</h1>
           <p className="page-lead">
-            I’m beginning with one serious open-source project and documenting
-            its architecture, trade-offs, failures, and progress in public.
+            I’m building open-source tools to test whether AI agents can do
+            their jobs safely, from processing Kafka events to diagnosing
+            Kubernetes failures.
           </p>
         </div>
       </section>
       <section className="detail-section">
-        <div className="page-grid">
-          <article className="project-card">
-            <span className="project-status">In discovery and foundation</span>
-            <h2>Infrastructure Agent Conformance</h2>
-            <p>
-              An open-source platform for testing whether AI infrastructure
-              agents diagnose Kubernetes incidents usefully and safely. The
-              first suite focuses on evidence grounding, least privilege,
-              synthetic secret leakage, hostile content in logs, and safe abstention.
-            </p>
-            <ul className="project-pill-list">
-              <li>Kubernetes</li><li>LangGraph</li><li>Security</li>
-              <li>OpenTelemetry</li><li>Distributed systems</li><li>Python</li>
-            </ul>
-          </article>
+        <div className="page-grid project-list">
+          {projects.map((project) => (
+            <article className="project-card" key={project.repository}>
+              <span className="project-status">{project.status}</span>
+              <h2>{project.name}</h2>
+              <p>{project.description}</p>
+              <ul className="project-pill-list">
+                {project.technologies.map((technology) => (
+                  <li key={technology}>{technology}</li>
+                ))}
+              </ul>
+              <a
+                className="text-link section-link"
+                href={project.repository}
+                aria-label={`View ${project.name} on GitHub`}
+              >
+                View on GitHub <Arrow />
+              </a>
+            </article>
+          ))}
         </div>
       </section>
     </>
